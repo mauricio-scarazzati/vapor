@@ -16,6 +16,7 @@ require('conexao.php');
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">
+    <script src="./assets/scripts.js"></script>
     <title>Vapor - Dashboard</title>
 </head>
 
