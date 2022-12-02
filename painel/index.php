@@ -14,6 +14,7 @@ $error_message = $_GET['error'] ?? null;
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">
+    <script src="assets/scripts.js"></script>
     <title>Vapor - Admnistrador - Login</title>
 </head>
 
@@ -24,7 +25,7 @@ $error_message = $_GET['error'] ?? null;
                 <img src="./public/images/logo.png" alt="Logo" width="100px">
                 <div class="coluna-login">
                     <div class="input">
-                        <input placeholder="E-mail" type="email" name="email" id="email" required>
+                        <input onclick="removerElementoPorID('mensagem-erro')" placeholder="E-mail" type="email" name="email" id="email" required>
                     </div>
                 </div>
                 <div class="coluna-login">
@@ -35,7 +36,7 @@ $error_message = $_GET['error'] ?? null;
                 <button class="button-default" type="submit">Entrar</button>
 
                 <?php if($error_message != null) { ?>
-                    <div class="error-message"><?=$error_message?></div>
+                    <div  id="mensagem-erro" class="error-message"><?=$error_message?></div>
                 <?php } ?>
             </form>
         </div>

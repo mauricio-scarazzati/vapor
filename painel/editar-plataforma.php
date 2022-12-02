@@ -12,13 +12,13 @@
         <div class="row">
             <div class="input-container quarter">
                 <label for="platform">Plataforma</label>
-                <input value="<?=$plataforma['nome']?>" name="platform" id="platform" class="row-input" type="text">
+                <input onclick="removerElementoPorID('mensagem-erro')" value="<?=$plataforma['nome']?>" name="platform" id="platform" class="row-input" type="text">
                 <input value="<?=$id_plataforma?>" name="id" type="hidden" >
             </div>
         </div>
 
         <?php if($error != null) { ?>
-            <div class="row error-message"><?=$error?></div>
+            <div id="mensagem-erro" class="row error-message"><?=$error?></div>
         <?php } ?>
 
         <div class="row row-button">

@@ -13,6 +13,6 @@ if ($categoria == null) {
    mysqli_query($conn, $criar_categoria);
    header("location: categorias.php");
 } else {
-    header("location: novo-categoria.php?error=Este categoria já está cadastrado");
+    header("location: nova-categoria.php?error=Esta categoria já está cadastrada!");
 }
 ?>

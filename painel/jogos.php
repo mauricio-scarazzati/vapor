@@ -32,7 +32,7 @@ $jogos = mysqli_query($conn, $query_jogos);
                     <td class="center"><a href="editar-idiomas-jogos.php?id=<?=$jogo['id'] ?>">Idiomas</a></td>
                     <td class="center"><a href="editar-plataformas-jogos.php?id=<?=$jogo['id'] ?>">Plataformas</a></td>
                     <td class="center"><a href="editar-jogo.php?id=<?=$jogo['id'] ?>">Editar</a></td>
-                    <td class="center"><a onclick="excluirjogo(<?=$jogo['id'] ?>)" href="#">Excluir</a></td>
+                    <td class="center"><a onclick="excluirelementoporid(<?=$jogo['id'] ?>,'Realmente deseja excluir esse jogo ?')" href="#">Excluir</a></td>
                 </tr>
 
             <?php } ?>

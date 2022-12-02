@@ -28,7 +28,7 @@ $idiomas = mysqli_query($conn, $query_idiomas);
                 <tr>
                     <td><?= $idioma['nome'] ?></td>
                     <td class="center"><a href="editar-idioma.php?id=<?= $idioma['id'] ?>">Editar</a></td>
-                    <td class="center"><a href="excluir-idioma.php?id=<?= $idioma['id'] ?>">Excluir</a></td>
+                    <td class="center"><a onclick="excluirelementoporid(<?=$idioma['id'] ?>,'Realmente deseja excluir esse idioma ?')" href="#">Excluir</a></td>
                 </tr>
 
             <?php } ?>

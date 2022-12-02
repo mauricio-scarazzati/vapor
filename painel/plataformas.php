@@ -28,7 +28,7 @@ $plataformas = mysqli_query($conn, $query_plataformas);
                 <tr>
                     <td><?= $plataforma['nome'] ?></td>
                     <td class="center"><a href="editar-plataforma.php?id=<?=$plataforma['id'] ?>">Editar</a></td>
-                    <td class="center"><a href="excluir-plataforma.php?id=<?=$plataforma['id'] ?>">Excluir</a></td>
+                    <td class="center"><a onclick="excluirelementoporid(<?=$plataforma['id'] ?>)" href="#">Excluir</a></td>
                 </tr>
 
             <?php } ?>

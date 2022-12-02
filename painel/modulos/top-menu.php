@@ -16,7 +16,7 @@ require('conexao.php');
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="assets/style.css">
     <link rel="shortcut icon" href="public/icons/favicon.ico" type="image/x-icon">
-    <script src="./assets/scripts.js"></script>
+    <script src="assets/scripts.js"></script>
     <title>Vapor - Dashboard</title>
 </head>
 
@@ -31,5 +31,7 @@ require('conexao.php');
 
             <div id="header">
                 <div id="name">Dashboard</div>
-                <div id="hello">Ola, <b>Administrador</b></div>
+                <div id="hello">Ola, <b>Administrador</b>
+                    <script src="./assets/scripts.js"></script>
+                </div>
             </div>
