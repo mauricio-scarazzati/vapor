@@ -80,3 +80,8 @@ function cor_aleatoria(){
 function iniciar_mudanca_cor(){
   setInterval(cor_aleatoria, 1000)
 }
+
+
+function transformar_texto_em_maiusculo(elemento){
+  elemento.value = elemento.value.toUpperCase()
+}
