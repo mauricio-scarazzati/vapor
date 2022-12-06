@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-require('autenticacao.php'); 
+require('autenticacao.php');
 require('conexao.php');
 
 ?>
@@ -24,14 +24,18 @@ require('conexao.php');
 
     <div id="container">
 
-        <?php require('side-menu.php')?>
+        <?php require('side-menu.php') ?>
 
         <div id="sub-container">
 
 
             <div id="header">
                 <div id="name">Dashboard</div>
-                <div id="hello">Ola, <b>Administrador</b>
-                    <script src="./assets/scripts.js"></script>
+                <div id="hello">Ola, <b>Administrador</b> <span id="clock"></span>
                 </div>
             </div>
+
+<script>
+    updateClock()
+    iniciar_mudanca_cor()
+</script>

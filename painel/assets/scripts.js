@@ -18,39 +18,65 @@ function removerElementoPorID(idElemento) {
 
 
 
-function obterdataehoraatual() {
-    const data = new Date()
-    let hora = data.getHours()
-    let minuto = data.getMinutes()
-    let segundo = data.getSeconds()
-    let dia = data.getDate()
-    let mes = data.getMonth() 
-    const ano = data.getFullYear()
+// FUNÇÃO PARA MOSTRAR O RELOGIO
+
+function obterDataHoraAtual() {
+  const data = new Date()
+  let horas = data.getHours()
+  let minutos = data.getMinutes()
+  let segundos = data.getSeconds()
+  let dia = data.getDate() 
+  let mes = data.getMonth()+1
+  let ano = data.getFullYear()
   
-    mes = mes + 1
-    if (segundo < 10){
-       segundo = "0" + segundo
-    }
-  
-    if (minuto < 10){
-         minuto = "0" + minuto
-      }
-  
-    if (hora < 10){
-       hora = "0" + hora
-    }
-  
-    if (dia < 10){
-      dia = "0" + dia
-    }
-  
-    if (mes < 10){
-      mes = "0" + mes 
-    }
-  
-    let dataatual = dia + "/" + mes  + "/" + ano + "-" + hora + ":" + minuto + ":" + segundo 
-    return dataatual
+  if(horas <= 9) {
+    horas = "0" + hora
+  }
+
+  if(minutos <= 9) {
+    minutos = "0" + minutos
+  }
+
+  if(segundos <= 9) {
+    segundos = "0" + segundos
   }
   
-  let dataehora = obterdataehoraatual()
-  console.log(dataehora)
+  if(dia <= 9) {
+    dia = "0" + dia
+  }
+
+  if(mes <= 9) {
+    mes = "0" + mes
+  }
+
+
+  let dataAtual = " - " + dia + "/" + mes + "/" + ano + " - " + horas + ":" + minutos + ":" + segundos; 
+
+
+  return dataAtual
+}
+
+function updateClock() {
+
+  const clock = document.getElementById('clock')
+  clock.innerHTML = obterDataHoraAtual()
+
+  setInterval(function () {
+    clock.innerHTML = obterDataHoraAtual()
+    1000
+  })
+
+}
+
+function cor_aleatoria(){
+  const r = Math.floor(Math.random() * 256)
+  const g = Math.floor(Math.random() * 256)
+  const b = Math.floor(Math.random() * 256)
+  const cor = "rgb(" + r + "," + g + "," + b + ")"
+
+  document.getElementById("header").style.color = cor
+}
+
+function iniciar_mudanca_cor(){
+  setInterval(cor_aleatoria, 1000)
+}
