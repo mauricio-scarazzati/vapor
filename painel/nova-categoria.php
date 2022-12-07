@@ -8,7 +8,7 @@
         <div class="row">
             <div class="input-container quarter">
                 <label for="category">Categoria</label>
-                <input onclick="removerElementoPorID('mensagem-erro')" name="category" id="category" class="row-input" type="text">
+                <input onclick="removerElementoPorID('mensagem-erro')" name="category" id="category" class="row-input" type="text" onkeyup="transformar_texto_em_maiusculo(this)">
             </div>
         </div>
 

@@ -8,7 +8,7 @@
         <div class="row">
             <div class="input-container quarter">
                 <label for="plataform">Plataforma</label>
-                <input onclick="removerElementoPorID('mensagem-erro')" name="plataform" id="plataform" class="row-input" type="text">
+                <input onclick="removerElementoPorID('mensagem-erro')" name="plataform" id="plataform" class="row-input" type="text" onkeyup="transformar_primeira_letra_em_maiusculo(this)">
             </div>
         </div>
 

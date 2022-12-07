@@ -2,7 +2,9 @@
 
 require('autenticacao.php');
 require('conexao.php');
-
+$_SESSION['administrador'] = $administrador;
+$query_adm = "SELECT * FROM administrador WHERE id = '{$administrador['id']}'";
+$nome_adm = mysqli_fetch_assoc(mysqli_query($conn, $query_adm));
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +33,7 @@ require('conexao.php');
 
             <div id="header">
                 <div id="name">Dashboard</div>
-                <div id="hello">Ola, <b>Administrador</b> <span id="clock"></span>
+                <div id="hello">Ola, <b><?=$nome_adm['nome']?></b> <span id="clock"></span>
                 </div>
             </div>
 

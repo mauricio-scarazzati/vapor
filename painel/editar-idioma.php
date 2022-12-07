@@ -12,7 +12,7 @@
         <div class="row">
             <div class="input-container quarter">
                 <label for="idiom">Idioma</label>
-                <input onclick="removerElementoPorID('mensagem-erro')" value="<?=$idioma['nome']?>" name="idiom" id="idiom" class="row-input" type="text">
+                <input onclick="removerElementoPorID('mensagem-erro')" value="<?=$idioma['nome']?>" name="idiom" id="idiom" class="row-input" type="text" onkeyup="transformar_primeira_letra_em_maiusculo(this)">
                 <input value="<?=$id_idioma?>" name="id" type="hidden" >
             </div>
         </div>

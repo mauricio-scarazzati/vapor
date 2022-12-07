@@ -85,3 +85,7 @@ function iniciar_mudanca_cor(){
 function transformar_texto_em_maiusculo(elemento){
   elemento.value = elemento.value.toUpperCase()
 }
+
+function transformar_primeira_letra_em_maiusculo(elemento){
+  elemento.value = elemento.value[0].toUpperCase() + elemento.value.slice(1).toLowerCase()
+}

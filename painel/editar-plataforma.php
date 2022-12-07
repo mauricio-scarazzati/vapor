@@ -12,7 +12,7 @@
         <div class="row">
             <div class="input-container quarter">
                 <label for="platform">Plataforma</label>
-                <input onclick="removerElementoPorID('mensagem-erro')" value="<?=$plataforma['nome']?>" name="platform" id="platform" class="row-input" type="text">
+                <input onclick="removerElementoPorID('mensagem-erro')" value="<?=$plataforma['nome']?>" name="platform" id="platform" class="row-input" type="text" onkeyup="transformar_primeira_letra_em_maiusculo(this)">
                 <input value="<?=$id_plataforma?>" name="id" type="hidden" >
             </div>
         </div>

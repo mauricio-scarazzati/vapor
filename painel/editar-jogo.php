@@ -20,7 +20,7 @@ $jogo = mysqli_fetch_assoc(mysqli_query($conn, $query_jogo));
 
             <div class="input-container quarter">
                 <label for="name">Nome*</label>
-                <input required name="name" id="name" class="row-input" type="text" value="<?=$jogo['nome']?>">
+                <input required name="name" id="name" class="row-input" type="text" value="<?=$jogo['nome']?>" onkeyup="transformar_texto_em_maiusculo(this)">
             </div>
 
             <div class="input-container quarter">
